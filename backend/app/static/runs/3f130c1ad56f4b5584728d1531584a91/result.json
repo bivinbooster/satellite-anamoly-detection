@@ -1,0 +1,48 @@
+{
+  "run_id": "3f130c1ad56f4b5584728d1531584a91",
+  "size": [
+    785,
+    799
+  ],
+  "assets": {
+    "t0_rgb": "/static/runs/3f130c1ad56f4b5584728d1531584a91/t0.png",
+    "t1_rgb": "/static/runs/3f130c1ad56f4b5584728d1531584a91/t1.png",
+    "diff_rgb": "/static/runs/3f130c1ad56f4b5584728d1531584a91/diff.png",
+    "heatmap": "/static/runs/3f130c1ad56f4b5584728d1531584a91/heatmap.png",
+    "overlay": "/static/runs/3f130c1ad56f4b5584728d1531584a91/overlay.png",
+    "landcover": "/static/runs/3f130c1ad56f4b5584728d1531584a91/landcover.png",
+    "anomaly_u8": "/static/runs/3f130c1ad56f4b5584728d1531584a91/anomaly_u8.png"
+  },
+  "metrics": {
+    "global": {
+      "anomaly_pixels_pct": 10.000079717481245,
+      "score_mean": 0.29111817479133606,
+      "score_p95": 0.5226552486419678
+    },
+    "by_category": {
+      "urban": {
+        "anomaly_pixels_pct": 10.000079717481245,
+        "pixels": 627215
+      },
+      "agriculture": {
+        "anomaly_pixels_pct": 0.0,
+        "pixels": 0
+      },
+      "forest": {
+        "anomaly_pixels_pct": 0.0,
+        "pixels": 0
+      },
+      "water": {
+        "anomaly_pixels_pct": 0.0,
+        "pixels": 0
+      }
+    }
+  },
+  "threshold_suggestion": 0.4632393419742584,
+  "landcover_labels": {
+    "urban": 0,
+    "agriculture": 1,
+    "forest": 2,
+    "water": 3
+  }
+}

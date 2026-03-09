@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test</title>
+</head>
+<body>
+    <h1>Direct Image Test</h1>
+    
+    <h2>Test 1: Direct Backend Image</h2>
+    <img src="http://localhost:8003/api/assets/b4ebae93-9d43-4429-8c51-5b32f69aad06/t0_rgb" 
+         style="width: 300px; height: 300px; border: 1px solid black;" 
+         onload="console.log('Backend image loaded')"
+         onerror="console.error('Backend image failed to load')">
+    
+    <h2>Test 2: Local File</h2>
+    <img src="/test_image.jpg" 
+         style="width: 300px; height: 300px; border: 1px solid black;" 
+         onload="console.log('Local image loaded')"
+         onerror="console.error('Local image failed to load')">
+         
+    <h2>Test 3: Static Image</h2>
+    <img src="https://via.placeholder.com/300" 
+         style="width: 300px; height: 300px; border: 1px solid black;" 
+         onload="console.log('Static image loaded')"
+         onerror="console.error('Static image failed to load')">
+    
+    <script>
+        console.log('Page loaded, testing images...');
+        
+        // Test fetch
+        fetch('http://localhost:8003/api/assets/b4ebae93-9d43-4429-8c51-5b32f69aad06/t0_rgb')
+            .then(response => {
+                console.log('Fetch response:', response.status, response.statusText);
+                return response.blob();
+            })
+            .then(blob => {
+                console.log('Got blob:', blob.size, 'bytes');
+            })
+            .catch(error => {
+                console.error('Fetch failed:', error);
+            });
+    </script>
+</body>
+</html>

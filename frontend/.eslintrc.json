@@ -1,0 +1,14 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "at-rule-no-unknown": ["error", { "ignoreAtRules": ["tailwind"] }]
+  },
+  "overrides": [
+    {
+      "files": ["*.css", "*.scss"],
+      "rules": {
+        "at-rule-no-unknown": ["error", { "ignoreAtRules": ["tailwind"] }]
+      }
+    }
+  ]
+}
